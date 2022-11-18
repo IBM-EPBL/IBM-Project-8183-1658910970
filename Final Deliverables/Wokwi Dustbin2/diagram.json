@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "6255_VIGNESH S",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -59.16, "left": 63.24, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -142.53, "left": 192.56, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "ultrasonic1:VCC", "esp:VIN", "red", [ "v204.83", "h-243.66", "v-57.27", "h41.91" ] ],
+    [ "ultrasonic1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "ultrasonic1:ECHO", "esp:D18", "green", [ "v0" ] ],
+    [ "ultrasonic1:TRIG", "esp:D5", "green", [ "v0" ] ]
+  ]
+}
